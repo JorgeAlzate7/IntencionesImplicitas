@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guia de Aprendizaje SENA - Intenciones"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Ejercicio 1 y 2: Lista de Productos con RecyclerView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicios 1, 2 y 3: Lugares y Productos"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLugares"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Ejercicio 4: Agregar dinamico y Toast -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 4: Agregar elementos a la lista"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/etNuevoItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Escribe un elemento" />
+
+            <Button
+                android:id="@+id/btnAgregarItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDinamico"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Ejercicio 5: Devolver resultado de ListaActivity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 5: Seleccionar producto"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnAbrirListaProductos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Abrir Lista de Productos" />
+
+        <TextView
+            android:id="@+id/tvProductoSeleccionado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ningun producto seleccionado"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Ejercicios 6 y 7: Actividades con Menu -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicios 6 y 7: Gestion con Menus"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnGestionContactos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Contactos (Ej 6)" />
+
+            <Button
+                android:id="@+id/btnGestionNotas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Notas (Ej 7)" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvContactosEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total contactos: 0"
+            android:layout_marginTop="4dp" />
+
+        <!-- Ejercicios 8, 9, 10, 11 y 12: Intenciones Implicitas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicios 8 al 12: Intenciones Implicitas"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="16dp" />
+
+        <!-- Ejercicio 9: Compartir texto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/etTextoCompartir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Texto a compartir" />
+
+            <Button
+                android:id="@+id/btnCompartirTexto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_share"
+                android:text=" Compartir" />
+        </LinearLayout>
+
+        <!-- Ejercicio 8: Google Maps -->
+        <Button
+            android:id="@+id/btnMostrarUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_map"
+            android:text=" Mostrar Ubicacion (Google Maps)" />
+
+        <!-- Ejercicio 10: Seleccionar Contacto -->
+        <Button
+            android:id="@+id/btnSeleccionarContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_call"
+            android:text=" Seleccionar Contacto del Telefono" />
+
+        <TextView
+            android:id="@+id/tvContactoSeleccionadoNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contacto seleccionado: Ninguno"
+            android:layout_marginTop="4dp" />
+
+        <!-- Ejercicio 11: Abrir PDF -->
+        <Button
+            android:id="@+id/btnAbrirPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_web"
+            android:text=" Abrir Archivo PDF" />
+
+        <!-- Ejercicio 12: Botones combinados de Intenciones Implicitas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ejercicio 12: Acciones Rapidas Implicitas"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnLlamar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_call"
+                android:text=" Llamar" />
+
+            <Button
+                android:id="@+id/btnCorreo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:drawableStart="@drawable/ic_email"
+                android:text=" Correo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnMapa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_map"
+                android:text=" Mapa" />
+
+            <Button
+                android:id="@+id/btnWeb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:drawableStart="@drawable/ic_web"
+                android:text=" Web" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
